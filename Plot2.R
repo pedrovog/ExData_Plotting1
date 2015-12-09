@@ -1,3 +1,4 @@
+# COURSERA - Exploratory Data Analysis - Course Project 1 - plot2.R
 rm(list = ls())
 
 ## DOWNLOAD AND UNZIP THE DATASET IN THE CURRENT WORK DIRECTORY
@@ -28,8 +29,7 @@ data$Date <- paste(data$Date, data$Time)
 data$Date <- as.POSIXct(strftime(data$Date, "%Y-%m-%d %H:%M:%S"))
 
 ## CHANGE DEFAULT PLOT BACKGROUND COLOR TO "TRANSPARENT"
-par(bg = "transparent") 
-
+par(bg = "transparent", mfrow = c(1,1)) 
 
 ## PLOT
 plot(data$Global_active_power ~ data$Date
